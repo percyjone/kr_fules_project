@@ -1,0 +1,119 @@
+/* ==========================================================
+   SIDEBAR - AUTO HOVER
+   ========================================================== */
+
+/* Main sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 0 !important;
+
+    overflow: hidden;
+
+    z-index: 2000;
+
+    transition:
+        width 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Invisible hover zone at the extreme left */
+#sidebar::before {
+    content: "";
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 14px;
+    height: 100vh;
+
+    z-index: 2001;
+
+    background: transparent;
+}
+
+
+/* When mouse enters sidebar */
+#sidebar:hover {
+    width: 230px !important;
+
+    box-shadow:
+        4px 0 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================================
+   PAGE CONTENT
+   ========================================================== */
+
+#page-content {
+    margin-left: 0 !important;
+
+    width: 100%;
+
+    transition:
+        margin-left 0.25s ease,
+        width 0.25s ease;
+}
+
+
+/* Move content slightly when sidebar opens */
+#sidebar:hover ~ #page-content {
+    margin-left: 230px !important;
+
+    width: calc(100% - 230px);
+}
+
+
+/* ==========================================================
+   SIDEBAR CONTENT
+   ========================================================== */
+
+#sidebar > * {
+    opacity: 0;
+
+    transition:
+        opacity 0.15s ease;
+}
+
+
+/* Show sidebar contents when opened */
+#sidebar:hover > * {
+    opacity: 1;
+}
+
+
+/* ==========================================================
+   SIDEBAR LINKS
+   ========================================================== */
+
+#sidebar a {
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+   ========================================================== */
+
+#sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+
+    border-radius: 10px;
+}

@@ -1,0 +1,39 @@
+.outlet-health-scroll {
+    max-height: 280px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+/* Chrome / Edge / Safari */
+.outlet-health-scroll::-webkit-scrollbar {
+    width: 7px;
+}
+
+.outlet-health-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.outlet-health-scroll::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+/* Show when cursor is inside outlet list */
+.outlet-health-scroll:hover::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+}
+
+/* Darker when cursor is directly on scrollbar */
+.outlet-health-scroll::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* Firefox: show scrollbar when cursor is inside */
+.outlet-health-scroll:hover {
+    scrollbar-color: #9ca3af transparent;
+}

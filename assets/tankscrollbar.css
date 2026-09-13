@@ -1,0 +1,80 @@
+/* ==========================================================
+   TANK TABLE SCROLLBAR
+   ========================================================== */
+
+/*
+   Normal state:
+   scrollbar is invisible
+*/
+
+.tank-table-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.tank-table-scroll::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+
+/*
+   When the user interacts with the table,
+   keep the scrollbar area very small.
+*/
+
+.tank-table-scroll:hover {
+    scrollbar-width: thin;
+}
+
+
+/*
+   Chrome / Edge / Safari
+*/
+
+.tank-table-scroll::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+
+/*
+   Scrollbar track
+*/
+
+.tank-table-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/*
+   Scrollbar thumb
+*/
+
+.tank-table-scroll::-webkit-scrollbar-thumb {
+
+    background: rgba(100, 116, 139, 0.35);
+
+    border-radius: 10px;
+
+}
+
+
+/*
+   Slightly darker when the mouse is over it
+*/
+
+.tank-table-scroll:hover::-webkit-scrollbar-thumb {
+
+    background: rgba(100, 116, 139, 0.55);
+
+}
+
+
+/*
+   Horizontal scrollbar
+*/
+
+.tank-table-scroll::-webkit-scrollbar-corner {
+    background: transparent;
+}

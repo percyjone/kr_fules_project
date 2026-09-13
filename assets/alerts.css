@@ -1,0 +1,36 @@
+/* ==========================================================
+   ALERT STOCK INDICATORS
+   ========================================================== */
+
+@keyframes stock-red-blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.15;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes stock-yellow-blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.15;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
