@@ -1,0 +1,6 @@
+# Ignore the config directory and its contents
+config/
+
+# Ignore data.json file
+data.json
+

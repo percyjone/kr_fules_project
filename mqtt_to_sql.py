@@ -4,6 +4,13 @@ from datetime import datetime
 import paho.mqtt.client as mqtt
 import mysql.connector as mysql
 
+from config.settings import (
+    DB_HOST,
+    DB_PORT,
+    DB_USER,
+    DB_PASSWORD,
+    DB_NAME,
+)
 from utils.alert_processor import (
     process_tank_reading
 )
@@ -14,11 +21,11 @@ from utils.alert_processor import (
 # ==========================================================
 
 db = mysql.connect(
-    host="localhost",
-    port=3306,
-    user="root",
-    password="",
-    database="iot_device"
+    host=DB_HOST,
+    port=DB_PORT,
+    user=DB_USER,
+    password=DB_PASSWORD,
+    database=DB_NAME
 )
 
 cursor = db.cursor()
